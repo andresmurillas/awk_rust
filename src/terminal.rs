@@ -4,7 +4,7 @@ use std::fs;
 pub fn get_command() -> Vec<String> {
     let args: Vec<String> = env::args().collect();
 
-    if &args.len() < &3 {
+    if args.len() < 3 {
         eprintln!("awk [prog] [file]");
         return vec!("end".to_string(), "".to_string());
     }
